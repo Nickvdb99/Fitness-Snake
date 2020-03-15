@@ -10,6 +10,17 @@ using System.Windows.Forms;
 
 namespace SnakeApp
 {
+    public static class Extensions
+    {
+        public static void Invoke<TControlType>(this TControlType control, Action<TControlType> del)
+            where TControlType : Control
+        {
+            if (control.InvokeRequired)
+                control.Invoke(new Action(() => del(control)));
+            else
+                del(control);
+        }
+    }
     public partial class Form1 : Form
     {
         private List<Circle> Snake = new List<Circle>();
@@ -127,7 +138,7 @@ namespace SnakeApp
             if (Settings.GameOver == false)
             {
                 Brush snakeColour; //Create new brush called snake colour
-                
+
                 //loop to check the snake parts
                 for (int i = 0; i < Snake.Count; i++)
                 {
@@ -149,7 +160,7 @@ namespace SnakeApp
 
 
                 }
-                
+
             }
             else
             {
@@ -199,8 +210,9 @@ namespace SnakeApp
 
         public static void Heartrate(int x)
         {
-            label5.Text = x.ToString();
-            label5.Update();
+            //label5.Text = x.ToString();
+            //label5.Update();
+            label5.Invoke(t => t.Text = x.ToString());
         }
     }
 }

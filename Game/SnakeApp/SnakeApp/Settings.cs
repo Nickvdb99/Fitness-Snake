@@ -29,7 +29,7 @@ namespace SnakeApp
         {
             Width = 16;
             Height = 16;
-            Speed = 10;
+            Speed = 10; // speed of snake
             Score = 0;
             Points = 100;
             GameOver = false;
