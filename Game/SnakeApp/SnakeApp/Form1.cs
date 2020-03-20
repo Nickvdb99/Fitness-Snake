@@ -10,17 +10,7 @@ using System.Windows.Forms;
 
 namespace SnakeApp
 {
-    public static class Extensions
-    {
-        public static void Invoke<TControlType>(this TControlType control, Action<TControlType> del)
-            where TControlType : Control
-        {
-            if (control.InvokeRequired)
-                control.Invoke(new Action(() => del(control)));
-            else
-                del(control);
-        }
-    }
+
     public partial class Form1 : Form
     {
         private List<Circle> Snake = new List<Circle>();
@@ -212,7 +202,24 @@ namespace SnakeApp
         {
             //label5.Text = x.ToString();
             //label5.Update();
-            label5.Invoke(t => t.Text = x.ToString());
+            label5.Invoke(t => t.Text = x.ToString()); // insert number into label
+
+            double age = 20; // user age
+            double max = 220 - age; // max heartrate according to age
+            double procent = (x / max)*100; // to procent
+            label7.Invoke(t => t.Text = procent.ToString()); // insert number into label
+        }
+    }
+
+    public static class Extensions
+    {
+        public static void Invoke<TControlType>(this TControlType control, Action<TControlType> del)
+            where TControlType : Control
+        {
+            if (control.InvokeRequired)
+                control.Invoke(new Action(() => del(control)));
+            else
+                del(control);
         }
     }
 }
