@@ -33,7 +33,7 @@ namespace SnakeApp
                     // Arduino
                     SerialPort myport = new SerialPort(); // serial port handler
                     myport.BaudRate = 115200;
-                    myport.PortName = "COM6"; // usb poort
+                    myport.PortName = "COM6"; // usb port
                     myport.Open();
 
                         while (true)
