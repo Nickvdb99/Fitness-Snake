@@ -33,12 +33,18 @@ In this map you will discover a map called 'SnakeApp', open the .sln file in thi
 
 ![SLN](Images/SLNFolder.PNG)
 
+### Program
+
+To completely configure the program we will need to know in which USB-port the Arduino is plugged in.  
+You will be able to find this in the Arduino software
+
 
 
 # TO DO
 Hoe laad je het programma in?
 
-Check COM poort (welke usb poort de arduino insteekt)
+Check COM poort (welke usb poort de arduino insteekt)  
+!arduino programma!
 
 Set COM poort: Program.Cs -> "myport.PortName = "COM3"; // usb poort"
 
