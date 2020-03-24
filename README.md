@@ -4,7 +4,7 @@ Hello and welcome to our version of Snake which includes a fitness tracker. You 
 
 If you are hooked up to a heartrate sensor your heartrate will be reflected in the game. It will tell you your current heartrate and heartrate percentage so you can aim for the most optimal heartrate for your training.
 
-Another importand thing about our Snake game is that any food you eat in the game will only count to your score if your heartrate is being tracked.
+Another important thing about our Snake game is that any food you eat in the game will only count to your score if your heartrate is being tracked.
 
 Information on how to setup the game and sensor is below.
 
