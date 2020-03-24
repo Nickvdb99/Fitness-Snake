@@ -25,7 +25,8 @@ To run our project you will need [Visual Studio](https://visualstudio.microsoft.
 Proceed through the installer until the program is completely installed.</br>
 
 We will also need the repository, so go ahead and download it [here](https://github.com/Nickvdb99/Fitness-Snake) if you haven't already.  
-Export the map called 'Game' in the zipped file you've downloaded
+Export the map called 'Game' in the zipped file you've downloaded  
+![Map](Images/GameMap.png)
 
 
 
