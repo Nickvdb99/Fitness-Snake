@@ -16,15 +16,19 @@ You'll need 6 male-male jumper cables and plug the cables into these ports on th
 | 4       | White    | RST  |
 | 5       | Orange | MFIO |
 
-[More detailed version](https://github.com/aliekens/pulse_sensor_tutorial)
+[More detailed explanation](https://github.com/aliekens/pulse_sensor_tutorial)
 
 
 ### Visual Studio
 
 To run our project you will need [Visual Studio](https://visualstudio.microsoft.com/downloads/)
 
-Upload programma
-Check COM poort (welke usb poort de arduino insteekt)
 
-Snake Game:
+# TO DO
+Hoe laad je het programma in?
+!Check COM poort (welke usb poort de arduino insteekt)!
 Set COM poort: Program.Cs -> "myport.PortName = "COM3"; // usb poort"
+Aanpassingen in het programma
+Gebruik van hartsensor tijdens spel
+
+(misschien de uitleg nog iets vergemakkelijken als ge denkt da het te moeilijk is)
