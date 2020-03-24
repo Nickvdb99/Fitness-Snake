@@ -81,3 +81,12 @@ If you click on 'Settings.cs' in the solution explorer you will find a few adjus
 ![Settings](Images/Settings.PNG)
 
 You can change these to whatever you like
+
+
+# TO DO
+
+Gebruik van hartsensor tijdens spel
+
+(misschien de uitleg nog iets vergemakkelijken als ge denkt da het te moeilijk is)
+
+Gebruik van script & arduino programma
