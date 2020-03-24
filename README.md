@@ -29,6 +29,9 @@ Export the map called 'Game' in the zipped file you've downloaded
 
 ![Map](Images/GameMap.PNG)
 
+In this map you will discover a map called 'SnakeApp', open the .sln file in this folder. 
+
+![SLN](Images/SLNFolder.PNG)
 
 
 
