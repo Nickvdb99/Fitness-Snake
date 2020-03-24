@@ -68,3 +68,16 @@ In the program, go to 'tools' -> 'ports' and there you will see which COM-port y
 In our Snake application you will need to change the value of the port to yours.
 In the solution explorer, click on 'Program.cs'  
 ![Solution](Images/SolExplorer.PNG)
+
+In our Program.cs you will need to change the value of the port, you will do that here:  
+![Ports](Images/Port.PNG)
+
+
+#### Settings
+
+You can also change a few of the game settings.
+If you click on 'Settings.cs' in the solution explorer you will find a few adjustable settings
+
+![Settings](Images/Settings.PNG)
+
+You can change these to whatever you like
