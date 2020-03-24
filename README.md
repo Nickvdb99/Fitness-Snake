@@ -19,7 +19,10 @@ You'll need 6 male-male jumper cables and plug the cables into these ports on th
 [More detailed version](https://github.com/aliekens/pulse_sensor_tutorial)
 
 
-Connect kabels
+### Visual Studio
+
+To run our project you will need [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+
 Upload programma
 Check COM poort (welke usb poort de arduino insteekt)
 
