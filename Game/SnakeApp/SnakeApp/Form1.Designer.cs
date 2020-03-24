@@ -38,6 +38,7 @@
             label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
+            HearrateDetectorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             this.pbCanvas.BackColor = System.Drawing.Color.Gray;
             this.pbCanvas.Location = new System.Drawing.Point(9, 8);
-            this.pbCanvas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbCanvas.Margin = new System.Windows.Forms.Padding(2);
             this.pbCanvas.Name = "pbCanvas";
             this.pbCanvas.Size = new System.Drawing.Size(361, 364);
             this.pbCanvas.TabIndex = 0;
@@ -131,11 +132,24 @@
             label7.TabIndex = 6;
             label7.Text = "00";
             // 
+            // HearrateDetectorLabel
+            // 
+            HearrateDetectorLabel.AutoSize = true;
+            HearrateDetectorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            HearrateDetectorLabel.ForeColor = System.Drawing.Color.Red;
+            HearrateDetectorLabel.Location = new System.Drawing.Point(374, 40);
+            HearrateDetectorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            HearrateDetectorLabel.Name = "HearrateDetectorLabel";
+            HearrateDetectorLabel.Size = new System.Drawing.Size(222, 24);
+            HearrateDetectorLabel.TabIndex = 7;
+            HearrateDetectorLabel.Text = "Heartrate Not Detected";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 399);
+            this.Controls.Add(HearrateDetectorLabel);
             this.Controls.Add(label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(label5);
@@ -144,7 +158,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbCanvas);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Snake Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
@@ -164,6 +178,7 @@
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private static System.Windows.Forms.Label HearrateDetectorLabel;
         public static System.Windows.Forms.Label label5;
         public static System.Windows.Forms.Label label7;
     }

@@ -201,6 +201,23 @@ namespace SnakeApp
         {
             Settings.GameOver = true;
         }
+        private static void HeartrateDetected()
+        {
+            if (Program.HeartrateDetected == true)
+            {
+                //HearrateDetectorLabel.Text = "Heartrate Detected!";
+                //HearrateDetectorLabel.ForeColor = System.Drawing.Color.Green;
+                HearrateDetectorLabel.Invoke(t => t.Text = "Heartrate Detected!");
+                HearrateDetectorLabel.Invoke(t => t.ForeColor = System.Drawing.Color.Green);
+            }
+            else
+            {
+                //HearrateDetectorLabel.Text = "Heartrate Not Detected";
+                //HearrateDetectorLabel.ForeColor = System.Drawing.Color.Red;
+                HearrateDetectorLabel.Invoke(t => t.Text = "Heartrate Not Detected!");
+                HearrateDetectorLabel.Invoke(t => t.ForeColor = System.Drawing.Color.Red);
+            }
+        }
 
         public static void Heartrate(int x)
         {
@@ -210,7 +227,10 @@ namespace SnakeApp
             double max = 220 - age; // max heartrate according to age
             double procent = (x / max) * 100; // to procent
             label7.Invoke(t => t.Text = procent.ToString()); // insert number into label
+            HeartrateDetected();
         }
+
+        
     }
 
     public static class Extensions // needed to insert values into form from other thread
