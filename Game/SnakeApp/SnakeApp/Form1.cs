@@ -187,10 +187,14 @@ namespace SnakeApp
                 X = Snake[Snake.Count - 1].X,
                 Y = Snake[Snake.Count - 1].Y
             };
-            Snake.Add(body); //add snake parts to array
-            Settings.Score += Settings.Points; //increase game score
-            label2.Text = Settings.Score.ToString();
-            generateFood();
+            if (Program.HeartrateDetected == true)
+            {
+                Snake.Add(body); //add snake parts to array
+                Settings.Score += Settings.Points; //increase game score
+            }
+            label2.Text = Settings.Score.ToString(); // insert new score in label
+            generateFood(); // generate new food
+            
         }
 
         private void die()
@@ -200,18 +204,16 @@ namespace SnakeApp
 
         public static void Heartrate(int x)
         {
-            //label5.Text = x.ToString();
-            //label5.Update();
             label5.Invoke(t => t.Text = x.ToString()); // insert number into label
 
             double age = 20; // user age
             double max = 220 - age; // max heartrate according to age
-            double procent = (x / max)*100; // to procent
+            double procent = (x / max) * 100; // to procent
             label7.Invoke(t => t.Text = procent.ToString()); // insert number into label
         }
     }
 
-    public static class Extensions
+    public static class Extensions // needed to insert values into form from other thread
     {
         public static void Invoke<TControlType>(this TControlType control, Action<TControlType> del)
             where TControlType : Control

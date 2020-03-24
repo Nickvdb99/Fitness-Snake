@@ -27,11 +27,11 @@ namespace SnakeApp
 
         public Settings()
         {
-            Width = 16;
-            Height = 16;
+            Width = 16; // width of canvas
+            Height = 16; // height of canvas
             Speed = 10; // speed of snake
-            Score = 0;
-            Points = 100;
+            Score = 0; // starting score
+            Points = 1; // points per food
             GameOver = false;
             direction = Directions.Down;
         }
