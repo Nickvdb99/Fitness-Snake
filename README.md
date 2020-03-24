@@ -21,7 +21,13 @@ You'll need 6 male-male jumper cables and plug the cables into these ports on th
 
 ### Visual Studio
 
-To run our project you will need [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+To run our project you will need [Visual Studio](https://visualstudio.microsoft.com/downloads/)<br/>
+Proceed through the installer until the program is completely installed.</br>
+
+We will also need the repository, so go ahead and download it [here](https://github.com/yungxog/Fitness-Snake) if you haven't already.  
+Export the map called 'Game' in the zipped file you've downloaded
+
+
 
 
 # TO DO
