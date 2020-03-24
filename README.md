@@ -24,7 +24,7 @@ To run our version of the snake game, you will need an [Arduino UNO](https://sto
 
 You'll need 6 male-male jumper cables and plug the cables into these ports on the Arduino & sensor. Connect it like the following picture. 
 
-![SensorAndArduino](Images/SensorAndArduino.PNG)
+![SensorAndArduino](Images/SensorAndArduino.png)
 
 #### Arduino IDE
 
