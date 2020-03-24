@@ -41,3 +41,29 @@ Don't forget to save the Program.cs and Settings.cs files if you made any change
 To start up the game you can either run the Program.cs file in Visual Studio or you can run the SnakeApp.exe file. You can find the .exe file in the following directory: \Fitness-Snake-master\Game\SnakeApp\SnakeApp\bin\Debug\SnakeApp.exe
 
 When using the pulse sensor it is important that you don't press too hard or move too much with your finger on the sensor. The game will say when the sensor gives an error.
+
+### Visual Studio
+
+To run our project you will need [Visual Studio](https://visualstudio.microsoft.com/downloads/)<br/>
+Proceed through the installer until the program is completely installed.</br>
+
+We will also need the repository, so go ahead and download it [here](https://github.com/Nickvdb99/Fitness-Snake) if you haven't already.  
+Export the map called 'Game' in the zipped file you've downloaded
+
+![Map](Images/GameMap.PNG)
+
+In this map you will discover a map called 'SnakeApp', open the .sln file in this folder. 
+
+![SLN](Images/SLNFolder.PNG)
+
+### Program
+
+To completely configure the program we will need to know in which USB-port the Arduino is plugged in.  
+You will be able to find this in the Arduino software
+
+In the program, go to 'tools' -> 'ports' and there you will see which COM-port your Arduino is plugged into. 
+
+![Arduino](Images/Arduino.PNG)
+
+In our Snake application you will need to change the value of the port to yours.
+In the solution explorer, click on 'Program.cs'
