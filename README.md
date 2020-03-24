@@ -10,7 +10,7 @@ Click on Sketch and on Upload.
 To use the game with the Arduino you need to find which port the Arduino is connected to. If you click on Tools and hover over Port, you can see to which port the Arduino is connected to.
 
 #### Next we will hook up our sensor to the Arduino:
-You'll need 6 male-male jumper cables and plug the cables into these ports on the arduino & sensor
+You'll need 6 male-male jumper cables and plug the cables into these ports on the Arduino & sensor.
 
 | Arduino | Cable Color  | Sensor |
 |---------|--------|------|
@@ -26,7 +26,7 @@ You'll need 6 male-male jumper cables and plug the cables into these ports on th
 
 ### Visual Studio
 
-To run our project you will need [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+To run our project you will need [Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
 ### Setup of the game
 
