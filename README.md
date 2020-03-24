@@ -65,10 +65,12 @@ To lauch the game navigate to SnakeApp.sln (Game\SnakeApp\SnakeApp.sln).
 
 ![SLN](Images/SLNFolder.PNG)
 
-Launch the solution with Visual studio. In the toolbar click on Start.
+Launch the game with Visual studio. In the toolbar click on Start.
 
 ![Start](Images/start.PNG)
 
 ### Play
 
 Once the game launches get ready because it will start quickly. Hold the sensor in your spare hand and aim the sensor at the fingerprint side of your index finger. Do not press to hard, but also hold the sensor firmly. The game will tell you if the sensor is working properly.
+
+Use the arrow keys on your keyboard to control the snake.
