@@ -66,4 +66,5 @@ In the program, go to 'tools' -> 'ports' and there you will see which COM-port y
 ![Arduino](Images/Arduino.PNG)
 
 In our Snake application you will need to change the value of the port to yours.
-In the solution explorer, click on 'Program.cs'
+In the solution explorer, click on 'Program.cs'  
+![Solution](Images/SolExplorer.PNG)
