@@ -13,8 +13,8 @@ namespace SnakeApp
 
     public partial class Form1 : Form
     {
-        private List<Circle> Snake = new List<Circle>();
-        private Circle food = new Circle();
+        private static List<Circle> Snake = new List<Circle>();
+        private static Circle food = new Circle();
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace SnakeApp
             startGame();
         }
 
-        private void updateScreen(object sender, EventArgs e)
+        private static void updateScreen(object sender, EventArgs e)
         {
             if (Settings.GameOver == true)
             {
@@ -56,10 +56,24 @@ namespace SnakeApp
                     Settings.direction = Directions.Down;
                 }
                 movePlayer();
+
+                // Variable speed
+                if (procent > Settings.MaximumHeartrateProcent) // if heartrate too high, snek go fast
+                {
+                    gameTimer.Interval = 1000 / Settings.FastSpeed;
+                }
+                else if (procent < Settings.MinimumHeartrateProcent) // if heartrate too low, snek go slow
+                {
+                    gameTimer.Interval = 1000 / Settings.SlowSpeed;
+                }
+                else // otherwise normal speed
+                {
+                    gameTimer.Interval = 1000 / Settings.Speed;
+                }
             }
             pbCanvas.Invalidate();
         }
-        private void movePlayer()
+        private static void movePlayer()
         {
             // main loop for snake head & parts
             for (int i = Snake.Count - 1; i >= 0; i--)
@@ -138,7 +152,20 @@ namespace SnakeApp
                     }
                     else
                     {
-                        snakeColour = Brushes.Green;
+                        // set color depending on speed
+                        if (procent > Settings.MaximumHeartrateProcent) // if heartrate too high, snek go red
+                        {
+                            snakeColour = Brushes.Red;
+                        }
+                        else if (procent < Settings.MinimumHeartrateProcent) // if heartrate too low, snek go blue
+                        {
+                            snakeColour = Brushes.Blue;
+                        }
+                        else // otherwise normal color
+                        {
+                            snakeColour = Brushes.Green;
+                        }
+                        
                     }
                     //draw snake body & head
                     canvas.FillEllipse(snakeColour,
@@ -147,10 +174,7 @@ namespace SnakeApp
                     //draw food
                     canvas.FillEllipse(Brushes.Red, new Rectangle(
                         food.X * Settings.Width, food.Y * Settings.Height, Settings.Width, Settings.Height));
-
-
                 }
-
             }
             else
             {
@@ -159,7 +183,7 @@ namespace SnakeApp
                 label3.Visible = true;
             }
         }
-        private void startGame()
+        private static void startGame()
         {
             label3.Visible = false;
             new Settings();
@@ -167,10 +191,12 @@ namespace SnakeApp
             Circle head = new Circle { X = 10, Y = 5 }; // new head for snake
             Snake.Add(head); //add head to snake array
 
-            label2.Text = Settings.Score.ToString(); // Show score
+            //label2.Text = Settings.Score.ToString(); // Show score
+            label2.Invoke(t => t.Text = Settings.Score.ToString()); // thread fix
+
             generateFood(); // run the food function
         }
-        private void generateFood()
+        private static void generateFood()
         {
             int maxXpos = pbCanvas.Size.Width / Settings.Width;
 
@@ -180,7 +206,7 @@ namespace SnakeApp
             food = new Circle { X = rnd.Next(0, maxXpos), Y = rnd.Next(0, maxYpos) };
         }
 
-        private void eat()
+        private static void eat()
         {
             Circle body = new Circle
             {
@@ -197,7 +223,7 @@ namespace SnakeApp
             
         }
 
-        private void die()
+        private static void die()
         {
             Settings.GameOver = true;
         }
@@ -219,18 +245,17 @@ namespace SnakeApp
             }
         }
 
+        private static double procent;
         public static void Heartrate(int x)
         {
             label5.Invoke(t => t.Text = x.ToString()); // insert number into label
 
             double age = 20; // user age
             double max = 220 - age; // max heartrate according to age
-            double procent = (x / max) * 100; // to procent
+            procent = (x / max) * 100; // to procent
             label7.Invoke(t => t.Text = procent.ToString()); // insert number into label
             HeartrateDetected();
         }
-
-        
     }
 
     public static class Extensions // needed to insert values into form from other thread

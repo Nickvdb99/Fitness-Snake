@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pbCanvas = new System.Windows.Forms.PictureBox();
+            pbCanvas = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            gameTimer = new System.Windows.Forms.Timer(this.components);
             this.label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             HearrateDetectorLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCanvas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pbCanvas)).BeginInit();
             this.SuspendLayout();
             // 
             // pbCanvas
             // 
-            this.pbCanvas.BackColor = System.Drawing.Color.Gray;
-            this.pbCanvas.Location = new System.Drawing.Point(9, 8);
-            this.pbCanvas.Margin = new System.Windows.Forms.Padding(2);
-            this.pbCanvas.Name = "pbCanvas";
-            this.pbCanvas.Size = new System.Drawing.Size(361, 364);
-            this.pbCanvas.TabIndex = 0;
-            this.pbCanvas.TabStop = false;
-            this.pbCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.updateGraphics);
+            pbCanvas.BackColor = System.Drawing.Color.Gray;
+            pbCanvas.Location = new System.Drawing.Point(9, 8);
+            pbCanvas.Margin = new System.Windows.Forms.Padding(2);
+            pbCanvas.Name = "pbCanvas";
+            pbCanvas.Size = new System.Drawing.Size(361, 364);
+            pbCanvas.TabIndex = 0;
+            pbCanvas.TabStop = false;
+            pbCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.updateGraphics);
             // 
             // label1
             // 
@@ -66,27 +66,27 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(469, 89);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "00";
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(469, 89);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(32, 24);
+            label2.TabIndex = 2;
+            label2.Text = "00";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(143, 147);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "End Text";
+            label3.AutoSize = true;
+            label3.BackColor = System.Drawing.Color.Black;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.ForeColor = System.Drawing.Color.Yellow;
+            label3.Location = new System.Drawing.Point(143, 147);
+            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(95, 24);
+            label3.TabIndex = 3;
+            label3.Text = "End Text";
             // 
             // label4
             // 
@@ -154,16 +154,16 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(label3);
+            this.Controls.Add(label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pbCanvas);
+            this.Controls.Add(pbCanvas);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Snake Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
-            ((System.ComponentModel.ISupportInitialize)(this.pbCanvas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pbCanvas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,11 +171,11 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pbCanvas;
+        public static System.Windows.Forms.PictureBox pbCanvas;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Timer gameTimer;
+        public static System.Windows.Forms.Label label2;
+        public static System.Windows.Forms.Label label3;
+        public static System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private static System.Windows.Forms.Label HearrateDetectorLabel;
